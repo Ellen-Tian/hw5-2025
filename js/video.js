@@ -25,6 +25,9 @@ window.addEventListener("load", function () {
 	// set initial volume
 	video.volume = (parseInt(slider.value, 10) || 100) / 100;
 	updateVolumeLabel();
+	console.log("Initial volume is " + video.volume);
+	document.querySelector("#volume").textContent = Math.round(video.volume * 100) + "%";
+
 
 	function updateVolumeLabel() {
 		volumeLabel.textContent = Math.round(video.volume * 100) + "%";
